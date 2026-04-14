@@ -1,6 +1,6 @@
-# Learning-With-AI-Projects
+## Learning-With-AI-Projects
 
-# 🧊 Fridge Hero – AI Recipe Generator
+## 🧊 Fridge Hero – AI Recipe Generator
 
 ## 🍽️ Overview
 Fridge Hero is a simple web application that generates recipe ideas based on ingredients provided by the user. It uses an AI model (Gorq API) to transform user inputs into a creative dish name and a simple recipe.
