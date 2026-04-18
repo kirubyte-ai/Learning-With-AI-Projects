@@ -55,7 +55,7 @@ Format: { "dishName": "Name", "steps": ["Step 1", "Step 2", "Step 3"] }`;
             const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
                 method: 'POST',
                 headers: {
-                    'Authorization': 'Bearer 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',
+                    'Authorization': 'YOUR_GORQ_API_KEY',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
