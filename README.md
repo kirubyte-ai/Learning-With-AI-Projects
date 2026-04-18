@@ -90,11 +90,22 @@ Instead of writing code manually, this project was created by **prompting AI (An
 ### 🧱 Base UI
 
 ```
-Create a clean and modern web app called "Fridge Hero" with:
-- Three ingredient inputs
-- A "Cook Magic" button
-- A result container
-Use glassmorphism design with gradient background and modern styling.
+Create a clean and modern web app called "Fridge Hero".
+
+Requirements:
+- Centered layout
+- A heading with the app name and a short tagline
+- Three input fields labeled Ingredient 1, Ingredient 2, Ingredient 3
+- A button labeled "Cook Magic"
+- An empty result container below the button
+
+Design style:
+- Modern glassmorphism UI
+- Gradient background (purple/blue tones)
+- Rounded corners, soft shadows
+- Clean font and spacing
+
+Keep the code simple using HTML, CSS, and JavaScript.
 ```
 
 ---
@@ -102,9 +113,16 @@ Use glassmorphism design with gradient background and modern styling.
 ### 🎨 UI Enhancement
 
 ```
-Improve the UI to look like a premium product:
-- Add hover effects, spacing, shadows
-- Use smooth animations and better alignment
+Improve the UI styling to make it look like a premium product.
+
+Add:
+- Smooth hover effects on button
+- Subtle animations (fade-in or scale)
+- Better spacing and alignment
+- Stylish input fields with focus effects
+- A card-style result container with rounded corners and shadow
+
+Make it visually impressive for a portfolio project.
 ```
 
 ---
@@ -112,11 +130,39 @@ Improve the UI to look like a premium product:
 ### 🤖 Groq API Integration
 
 ```
-Add functionality to:
-- Read input values
-- Send a request to Groq API (chat/completions)
-- Use model llama3-8b-8192
-- Extract and display response in result container
+Add JavaScript functionality to:
+
+- Read values from the three input fields when the button is clicked
+
+- Build a prompt like:
+"I have [ingredient1], [ingredient2], and [ingredient3]. Give me a fancy dish name and a simple 3-step recipe."
+
+- Send a POST request to Groq API using this endpoint:
+https://api.groq.com/openai/v1/chat/completions
+
+- Use model: llama3-8b-8192 (or any available Groq model)
+
+- Use this request format:
+{
+  "model": "llama3-8b-8192",
+  "messages": [
+    {
+      "role": "user",
+      "content": "PROMPT_HERE"
+    }
+  ]
+}
+
+- Add headers:
+Authorization: Bearer YOUR_GROQ_API_KEY
+Content-Type: application/json
+
+- Extract the response text from:
+data.choices[0].message.content
+
+- Display the response inside the result container
+
+Use async/await and keep the code clean and readable.
 ```
 
 ---
@@ -124,23 +170,25 @@ Add functionality to:
 ### ⚡ Loading State
 
 ```
-- Change button text to "Cooking..."
-- Disable button while loading
-- Restore after response
+Enhance the user experience:
+
+- When the button is clicked, change button text to "Cooking..."
+- Disable the button while loading
+- Show a loading animation or message
+- After response, restore button text to "Cook Magic"
 ```
 
 ---
 
-### 💌 Romantic Recipe Output
+### 💌 Format Beautifully the Recipe Output
 
 ```
-Structure output as:
-- Dish Name
-- 2–3 line poetic description
-- Ingredients used
-- 4–5 clear steps
+Improve how the API response is displayed:
 
-Keep it romantic but practical.
+- Separate dish name and steps clearly
+- Use headings, spacing, and bullet points
+- Style it like a recipe card
+- Make it visually readable and attractive
 ```
 
 ---
@@ -176,7 +224,7 @@ Create sparkle effects that follow cursor:
 
 ---
 
-### 💖 Romantic Theme Mode
+### 💖 Aesthetic Theme Mode
 
 ```
 Add toggle for romantic UI:
