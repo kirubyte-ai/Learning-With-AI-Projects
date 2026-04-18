@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fridge Hero</title>
+    <!-- Modern Typography: Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+        <span class="icon-romantic" style="display: none;">🌌</span>
+        <span class="icon-default">🌸</span>
+    </button>
+    <div class="glass-container">
+        <header class="app-header">
+            <h1 class="app-title">Fridge Hero</h1>
+            <p class="app-tagline">Turn leftovers into culinary legends</p>
+        </header>
+
+        <main class="app-main">
+            <div class="input-group">
+                <input type="text" id="ingredient1" placeholder="Ingredient 1 (e.g. Chicken)" aria-label="Ingredient 1">
+                <div class="input-glow"></div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="ingredient2" placeholder="Ingredient 2 (e.g. Rice)" aria-label="Ingredient 2">
+                <div class="input-glow"></div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="ingredient3" placeholder="Ingredient 3 (e.g. Onion)" aria-label="Ingredient 3">
+                <div class="input-glow"></div>
+            </div>
+
+            <button id="cook-magic-btn" class="primary-btn">
+                <span class="btn-text">Cook Magic</span>
+                <span class="btn-icon">✨</span>
+            </button>
+
+            <div id="result-container" class="result-container hidden">
+                <!-- Processing results or empty state will appear here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
