@@ -16,7 +16,7 @@ This project highlights the use of AI tools for learning, research understanding
 
 ### Paper Title:
 
-**BERT: BERT: A Review of Applications in Natural Language
+**BERT: A Review of Applications in Natural Language
 Processing and Understanding**
 
 ### Authors:
